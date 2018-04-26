@@ -22,31 +22,45 @@
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Shape3D">
-    <Position X="10.25" Y="2" Width="1.5" />
+    <Position X="10.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Shape3D.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Ellipse">
-    <Position X="1.5" Y="4" Width="1.5" />
+    <Position X="1.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Ellipse.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Rectangle">
-    <Position X="4.5" Y="4" Width="1.5" />
+    <Position X="4.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Rectangle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Cuboid">
-    <Position X="8.5" Y="4" Width="1.5" />
+    <Position X="8" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cuboid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="examination2.Cylinder">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cylinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="examination2.Sphere">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sphere.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
