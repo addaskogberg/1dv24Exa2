@@ -7,5 +7,9 @@ namespace examination2
 {
     public class Cylinder : Shape3D
     {
+        public Cylinder()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
