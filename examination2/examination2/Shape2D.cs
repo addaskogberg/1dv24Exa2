@@ -10,9 +10,11 @@ namespace examination2
         private double _length;
         private double _width;
 
-        protected Shape2D(string shapeType, double length, double width)
+        protected Shape2D(ShapeType shapeType, double length, double width)
         {
-            throw new System.NotImplementedException();
+            _length = length;
+            _width = width;
+            base.ShapeType = shapeType;
         }
 
         public double Area

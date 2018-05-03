@@ -51,6 +51,7 @@
     <Compile Include="Shape.cs" />
     <Compile Include="Shape2D.cs" />
     <Compile Include="Shape3D.cs" />
+    <Compile Include="ShapeType.cs" />
     <Compile Include="Sphere.cs" />
   </ItemGroup>
   <ItemGroup>

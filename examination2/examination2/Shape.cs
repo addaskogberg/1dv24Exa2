@@ -16,7 +16,7 @@ namespace examination2
 
         public bool Is3D => _is3D;
 
-        public int ShapeType { get; set; }
+        public ShapeType ShapeType { get; set; }
 
 
         public void ToString()
