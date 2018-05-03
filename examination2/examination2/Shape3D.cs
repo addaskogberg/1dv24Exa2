@@ -104,7 +104,7 @@ namespace examination2
             returnString += "Höjd : " + Height.ToString() + "\n";
             returnString += "Mantelarea :" + MantelArea.ToString() + "\n";
             returnString += "Begränsningsarea: " + TotalSurfaceArea.ToString() + "\n";
-            returnString += "Volym : " + Volume.ToString() + "\n";
+            returnString += "Volym : " + Volume.ToString();
 
             return returnString;
         }

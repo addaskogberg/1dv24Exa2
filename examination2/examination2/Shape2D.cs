@@ -17,7 +17,18 @@ namespace examination2
 
         public double Area
         {
-            get => Length * Width;
+            get
+            {
+                if (Rectangle)
+                {
+                    return  _length * _width;
+                }
+                else
+                {
+                    return Math.PI *_length * _width;
+                }
+
+            }
 
         }
 
@@ -34,11 +45,11 @@ namespace examination2
             {
                 if (Rectangle)
                 {
-                    return ;
-                }
+                    return 2 * _length + 2 + _width ;
+                } 
                 else
                 {
-                    return ;
+                    return Math.Sqrt(Math.Pow(_length, 2)*2 + Math.Pow(_width, 2)*2)*Math.PI ;
                 }
 
             }
@@ -47,23 +58,22 @@ namespace examination2
 
         public double Width
         {
-            get
-            {
-                return this._width;
-            }
-            set
-            {
-            }
+            get => _width;
+
+            set => _width = value;
         }
 
-        public string ToString()
+        public new string ToString()
         {
-            throw new System.NotImplementedException();
+            string returnString = "";
+            returnString += "Längd : " + Length.ToString() + "\n";
+            returnString += "Bredd : " + Width.ToString() + "\n";
+            returnString += "Omkrets: " + Perimeter.ToString() + "\n";
+            returnString += "Area : " + Area.ToString();
+
+            return returnString;
         }
 
-        public string ToString()
-        {
-            throw new System.NotImplementedException();
-        }
+        public string ToString(string format) => "Ellipse " + Length.ToString() + " " + Width.ToString() + " " + Perimeter.ToString() + " " + Area.ToString();
     }
 }
