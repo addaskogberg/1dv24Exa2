@@ -7,14 +7,14 @@ namespace examination2
 {
     public class Rectangle : Shape2D
     {
-        public Rectangle()
+        public Rectangle(double length, double width)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public double Area
         {
-            get => default(int);
+            get => default(double);
             set
             {
             }
@@ -22,7 +22,7 @@ namespace examination2
 
         public double Perimeter
         {
-            get => default(int);
+            get => default(double);
             set
             {
             }

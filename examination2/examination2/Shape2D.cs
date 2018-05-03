@@ -7,7 +7,7 @@ namespace examination2
 {
     public abstract class Shape2D : Shape
     {
-        private doubl _length;
+        private double _length;
         private double _width;
 
         protected Shape2D(string shapeType, double length, double width)
@@ -17,31 +17,40 @@ namespace examination2
 
         public double Area
         {
-            get => default(int);
-            set
-            {
-            }
+            get => Length * Width;
+
         }
 
         public double Length
         {
-            get => default(int);
-            set
-            {
-            }
+            get => _length;
+
+            set => _length = value;
         }
 
         public double Perimeter
         {
-            get => default(int);
-            set
+            get
             {
+                if (Rectangle)
+                {
+                    return ;
+                }
+                else
+                {
+                    return ;
+                }
+
             }
+           
         }
 
-        public int Width
+        public double Width
         {
-            get => default(int);
+            get
+            {
+                return this._width;
+            }
             set
             {
             }

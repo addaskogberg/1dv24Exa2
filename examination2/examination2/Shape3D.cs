@@ -9,7 +9,7 @@ namespace examination2
     {
         protected Shape2D _baseShape;
         protected double _height;
-
+     
         public Shape3D()
         {
             throw new System.NotImplementedException();
@@ -17,60 +17,99 @@ namespace examination2
 
         public double Height
         {
-            get => default(int);
+            get
+            {
+                return _height;
+            }
             set
             {
+                _height = value;
             }
         }
 
         public double Length
         {
-            get => default(int);
+            get
+            {
+                return _baseShape.Length;
+            }
             set
             {
+                _baseShape.Length = value;
             }
         }
 
         public double MantelArea
         {
-            get => default(int);
-            set
+            get 
             {
+                if (Sphere)
+                {
+                    return _baseShape.Area * 4;
+                }
+                else 
+                {
+                    return _baseShape.Perimeter * 4;
+                }
+               
             }
         }
 
         public double TotalSurfaceArea
         {
-            get => default(int);
-            set
+            get
             {
+                if (Sphere)
+                {
+                    return _baseShape.Area * 4;
+                }
+                else
+                {
+                    return MantelArea + (2 * _baseShape.Area);
+                }
+
             }
+
         }
 
         public double Width
         {
-            get => default(int);
+            get
+            {
+                return _baseShape.Width;
+            }
             set
             {
+                _baseShape.Width = value;
             }
         }
 
         public double Volume
         {
-            get => default(int);
+            get
+            {
+                return _baseShape.Area * _height;
+            }
             set
             {
+                Volume = value;
             }
         }
 
-        public void ToString()
+        public new string ToString()
         {
-            throw new System.NotImplementedException();
+            string returnString = "";
+            returnString += "Längd : " + Length.ToString() + "\n";
+            returnString += "Bredd : " + Width.ToString() + "\n";
+            returnString += "Höjd : " + Height.ToString() + "\n";
+            returnString += "Mantelarea :" + MantelArea.ToString() + "\n";
+            returnString += "Begränsningsarea: " + TotalSurfaceArea.ToString() + "\n";
+            returnString += "Volym : " + Volume.ToString() + "\n";
+
+            return returnString;
         }
 
-        public void ToString()
-        {
-            throw new System.NotImplementedException();
-        }
+        public string ToString(string format) => "Sphere " + Length.ToString() + " " + Width.ToString() + " " + Height.ToString() + " " +
+                MantelArea.ToString() + " " + TotalSurfaceArea.ToString() + " " + Volume.ToString();
     }
 }

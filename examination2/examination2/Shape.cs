@@ -7,26 +7,17 @@ namespace examination2
 {
     public abstract class Shape
     {
+        private readonly bool _is3D;
+
         protected Shape()
         {
             throw new System.NotImplementedException();
         }
 
-        public readonly bool Is3D
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+        public bool Is3D => _is3D;
 
-        public int ShapeType
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+        public int ShapeType { get; set; }
+
 
         public void ToString()
         {
