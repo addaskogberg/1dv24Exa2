@@ -10,6 +10,9 @@ namespace examination2
     {
         static void Main(string[] args)
         {
+            Rectangle rectangle = new Rectangle(12.2 , 10.0);
+            Console.WriteLine(rectangle.ToString());
+            Console.ReadLine();
         }
     }
 }
