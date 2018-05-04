@@ -11,17 +11,17 @@ namespace examination2
         private double _width;
 
         protected Shape2D(ShapeType shapeType, double length, double width)
+            : base(shapeType)
         {
             _length = length;
             _width = width;
-            base.ShapeType = shapeType;
         }
 
         public double Area
         {
             get
             {
-                if (Rectangle)
+                if (base.ShapeType == ShapeType.Rectangle)
                 {
                     return  _length * _width;
                 }
@@ -45,7 +45,7 @@ namespace examination2
         {
             get
             {
-                if (Rectangle)
+                if (base.ShapeType == ShapeType.Rectangle)
                 {
                     return 2 * _length + 2 + _width ;
                 } 
@@ -76,6 +76,6 @@ namespace examination2
             return returnString;
         }
 
-        public string ToString(string format) => "Ellipse " + Length.ToString() + " " + Width.ToString() + " " + Perimeter.ToString() + " " + Area.ToString();
+        public string ToString(string format) => ShapeType.ToString() + Length.ToString() + " " + Width.ToString() + " " + Perimeter.ToString() + " " + Area.ToString();
     }
 }

@@ -8,20 +8,23 @@ namespace examination2
     public abstract class Shape
     {
         private readonly bool _is3D;
-
-        protected Shape()
+ 
+        protected Shape(ShapeType shapeType)
         {
-            throw new System.NotImplementedException();
+            ShapeType = shapeType;
         }
 
         public bool Is3D => _is3D;
 
-        public ShapeType ShapeType { get; set; }
-
-
-        public void ToString()
+        public ShapeType ShapeType
         {
-            throw new System.NotImplementedException();
+            get;
+            private set;
+        }
+
+        public new string ToString()
+        {
+            return ShapeType.ToString();
         }
     }
 }

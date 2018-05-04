@@ -7,30 +7,26 @@ namespace examination2
 {
     public class Ellipse : Shape2D
     {
-        public Ellipse()
+        public Ellipse(double diameter)
+            :base(ShapeType.Ellipse, diameter, diameter)
         {
-            throw new System.NotImplementedException();
+            // Detta är en cirkel
         }
 
-        public Ellipse()
+        public Ellipse(double hdiameter, double vdiameter)
+            : base(ShapeType.Ellipse, hdiameter, vdiameter)
         {
-            throw new System.NotImplementedException();
+
         }
 
-        public double Area
+        public new double Area
         {
-            get => default(int);
-            set
-            {
-            }
+            get => base.Area;
         }
 
-        public double Perimeter
+        public new double Perimeter
         {
-            get => default(int);
-            set
-            {
-            }
+            get => base.Perimeter;
         }
     }
 }

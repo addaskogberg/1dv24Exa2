@@ -8,63 +8,63 @@
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Shape">
-    <Position X="6.75" Y="0.5" Width="2" />
+    <Position X="4.75" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAEAAQAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>Shape.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Shape2D">
-    <Position X="2.5" Y="2.5" Width="1.5" />
+    <Position X="2" Y="4" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAEAAAAAEBAABAAAAAABAAAAQAAAAA=</HashCode>
       <FileName>Shape2D.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Shape3D">
-    <Position X="10.75" Y="4" Width="1.5" />
+    <Position X="6.75" Y="3.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAABACAAAAEAAAAAEBAAAAAIAAIAAIAAAAAAAA=</HashCode>
       <FileName>Shape3D.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Ellipse">
-    <Position X="0.5" Y="6" Width="1.5" />
+    <Position X="1" Y="8" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Ellipse.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Rectangle">
-    <Position X="4.25" Y="6" Width="1.5" />
+    <Position X="3.25" Y="8" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Rectangle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Cuboid">
-    <Position X="7.75" Y="8.75" Width="1.5" />
+    <Position X="5.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cuboid.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Cylinder">
-    <Position X="10.75" Y="8.75" Width="1.5" />
+    <Position X="7.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cylinder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="examination2.Sphere">
-    <Position X="13.75" Y="8.25" Width="1.5" />
+    <Position X="9" Y="8" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAIAAIBAAAAAAA=</HashCode>
       <FileName>Sphere.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="examination2.ShapeType">
-    <Position X="5.25" Y="4" Width="1.5" />
+    <Position X="0.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAQAAAAAAAAgAAAAQAQAAAAAAAA=</HashCode>
       <FileName>ShapeType.cs</FileName>

@@ -10,9 +10,11 @@ namespace examination2
         protected Shape2D _baseShape;
         protected double _height;
      
-        public Shape3D()
+        protected Shape3D(ShapeType shapeType, Shape2D baseShape, double height)
+            : base(shapeType)
         {
-            throw new System.NotImplementedException();
+            _baseShape = baseShape;
+            _height = height;
         }
 
         public double Height
@@ -43,7 +45,7 @@ namespace examination2
         {
             get 
             {
-                if (Sphere)
+                if (base.ShapeType == ShapeType.Sphere)
                 {
                     return _baseShape.Area * 4;
                 }
@@ -59,7 +61,7 @@ namespace examination2
         {
             get
             {
-                if (Sphere)
+                if (base.ShapeType == ShapeType.Sphere)
                 {
                     return _baseShape.Area * 4;
                 }
@@ -109,7 +111,7 @@ namespace examination2
             return returnString;
         }
 
-        public string ToString(string format) => "Sphere " + Length.ToString() + " " + Width.ToString() + " " + Height.ToString() + " " +
+        public string ToString(string format) => ShapeType.ToString() + Length.ToString() + " " + Width.ToString() + " " + Height.ToString() + " " +
                 MantelArea.ToString() + " " + TotalSurfaceArea.ToString() + " " + Volume.ToString();
     }
 }

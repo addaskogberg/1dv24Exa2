@@ -8,24 +8,18 @@ namespace examination2
     public class Rectangle : Shape2D
     {
         public Rectangle(double length, double width)
+            :base(ShapeType.Rectangle, length, width)
         {
-            throw new NotImplementedException();
         }
 
-        public double Area
+        public new double Area
         {
-            get => default(double);
-            set
-            {
-            }
+            get => base.Area;
         }
 
-        public double Perimeter
+        public new double Perimeter
         {
-            get => default(double);
-            set
-            {
-            }
+            get => base.Perimeter;
         }
     }
 }

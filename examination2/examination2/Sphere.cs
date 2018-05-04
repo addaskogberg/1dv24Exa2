@@ -7,41 +7,34 @@ namespace examination2
 {
     public class Sphere : Shape3D
     {
-        public Sphere()
+        public Sphere(double diameter)
+            : base(ShapeType.Ellipse, new Ellipse(diameter), 0.0)
         {
-            throw new System.NotImplementedException();
+            Diameter = diameter;
         }
 
-        public double Diameter
+        public double Diameter // Tveksamt om detta är rätt :-(
         {
-            get => default(int);
+            get => Diameter;
             set
             {
+                Diameter = value;
             }
         }
 
-        public double MantelArea
+        public new double MantelArea
         {
-            get => default(int);
-            set
-            {
-            }
+            get => base.MantelArea;
         }
 
-        public int TotalSurfaceAre
+        public double TotalSurfaceAre
         {
-            get => default(int);
-            set
-            {
-            }
+            get => base.TotalSurfaceArea;
         }
 
-        public double Volume
+        public new double Volume
         {
-            get => default(int);
-            set
-            {
-            }
+            get => base.Volume;
         }
     }
 }
