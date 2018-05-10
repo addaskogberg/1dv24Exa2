@@ -111,7 +111,22 @@ namespace examination2
             return returnString;
         }
 
-        public string ToString(string format) => ShapeType.ToString() + Length.ToString() + " " + Width.ToString() + " " + Height.ToString() + " " +
-                MantelArea.ToString() + " " + TotalSurfaceArea.ToString() + " " + Volume.ToString();
+        public string ToString(string format)
+        {
+            if (format == "R")
+            {
+                return ShapeType.ToString() + " " + Length.ToString() + " " + Width.ToString() + " " + Height.ToString() + " " +
+                    MantelArea.ToString() + " " + TotalSurfaceArea.ToString() + " " + Volume.ToString();
+            }
+            else if (format == "G" || format == "" || format == null)
+            {
+                return ToString();
+            }
+            else
+            {
+                throw new FormatException("Please use R, G, \"\" or null calling the ToSting method");
+            }
+
+        }
     }
 }

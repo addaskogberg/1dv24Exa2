@@ -76,6 +76,20 @@ namespace examination2
             return returnString;
         }
 
-        public string ToString(string format) => ShapeType.ToString() + Length.ToString() + " " + Width.ToString() + " " + Perimeter.ToString() + " " + Area.ToString();
+        public string ToString(string format)
+        {
+            if (format == "R")
+            {
+                return ShapeType.ToString() + " " + Length.ToString() + " " + Width.ToString() + " " + Perimeter.ToString() + " " + Area.ToString();
+            }
+            else if (format == "G" || format == "" || format == null)
+            {
+                return ToString();
+            }
+            else
+            {
+                throw new FormatException("Please use R, G, \"\" or null calling the ToSting method");
+            }
+        }
     }
 }

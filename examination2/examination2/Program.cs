@@ -13,7 +13,7 @@ namespace examination2
             Console.WriteLine(ShapeType.Ellipse +":");
             Console.WriteLine("--------------");
             Ellipse ellipse = new Ellipse(10.0);
-            Console.WriteLine(ellipse.ToString());
+            Console.WriteLine(ellipse.ToString("R"));
             Console.WriteLine();
 
             Console.WriteLine(ShapeType.Rectangle + ":");
@@ -22,24 +22,24 @@ namespace examination2
             Console.WriteLine(rectangle.ToString());
             Console.WriteLine();
 
-            Console.WriteLine(ShapeType.Rectangle + ":");
+            Console.WriteLine(ShapeType.Cuboid + ":");
             Console.WriteLine("--------------");
             Cuboid cuboid = new Cuboid(2.0, 1.0, 3.0);
-            Console.WriteLine(cuboid.ToString());
+            Console.WriteLine(cuboid.ToString(null));
             Console.WriteLine();
 
             Console.WriteLine(ShapeType.Cylinder + ":");
             Console.WriteLine("--------------");
             Cylinder cylinder = new Cylinder(3.0, 2.0, 2.0);
-            Console.WriteLine(cylinder.ToString());
+            Console.WriteLine(cylinder.ToString("R"));
             Console.WriteLine();
 
             Console.WriteLine(ShapeType.Sphere + ":");
             Console.WriteLine("--------------");
             Sphere sphere = new Sphere(2.0);
-            Console.WriteLine(sphere.ToString());
+            Console.WriteLine(sphere.ToString("G"));
             
-            Console.ReadLine();
+            Console.Read();
         }
     }
 }
