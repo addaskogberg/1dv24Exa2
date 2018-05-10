@@ -13,12 +13,23 @@ namespace examination2
             Diameter = diameter;
         }
 
-        public double Diameter // Tveksamt om detta är rätt :-(
+        public double Diameter 
         {
-            get => Diameter;
+            get
+            {
+                if (Width == Length)
+                {
+                    return Width + Length;
+                }
+                else
+                {
+                   return -1.0;
+                }
+            }
             set
             {
-                Diameter = value;
+                base.Length = value;
+                base.Height = value;
             }
         }
 
