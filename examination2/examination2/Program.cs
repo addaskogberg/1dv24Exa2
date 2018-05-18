@@ -24,7 +24,7 @@ namespace examination2
 
             Console.WriteLine(ShapeType.Cuboid + ":");
             Console.WriteLine("--------------");
-            Cuboid cuboid = new Cuboid(2.0, 1.0, 3.0);
+            Cuboid cuboid = new Cuboid(2.0, 4.0, 3.0);
             Console.WriteLine(cuboid.ToString(null));
             Console.WriteLine();
 

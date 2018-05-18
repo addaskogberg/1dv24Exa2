@@ -14,7 +14,7 @@ namespace examination2
             ShapeType = shapeType;
         }
 
-        public bool Is3D => _is3D;
+       // public bool Is3D => _is3D;
 
         public ShapeType ShapeType
         {
