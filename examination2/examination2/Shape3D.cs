@@ -108,8 +108,8 @@ namespace examination2
         {
             if (format == "R")
             {
-                return ShapeType.ToString() + " " + Length.ToString() + " " + Width.ToString() + " " + Height.ToString() + " " +
-                    MantelArea.ToString() + " " + TotalSurfaceArea.ToString() + " " + Volume.ToString();
+                return ShapeType.ToString() + " " + Math.Round(Length, 2).ToString() + " " + Math.Round(Width, 2).ToString() + " " + Math.Round(Height, 2).ToString() + " " +
+                    Math.Round(MantelArea, 2).ToString() + " " + Math.Round(TotalSurfaceArea, 2).ToString() + " " + Math.Round(Volume, 2).ToString();
             }
             else if (format == "G" || format == "" || format == null)
             {

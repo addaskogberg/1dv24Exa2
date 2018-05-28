@@ -41,10 +41,14 @@ namespace examination2 // ANVÄNDAREN SKA KUNNA VÄLJA ATT SLUMPA 2D ELLER 3D ..
                 List<Shape2D> shapes = new List<Shape2D>();
                 for (int i = 0; i < 20; i++)
                 {
-                    int figure2D = random.Next(1, 3);
+                    int figure2D = random.Next(1, 4);
                     if(figure2D == 1)
                     {
                         shapes.Add(new Ellipse(random.NextDouble() * random.Next(1,101) ));
+                    }
+                    else if (figure2D == 2)
+                    {
+                        shapes.Add(new Ellipse(random.NextDouble() * random.Next(1, 101), random.NextDouble() * random.Next(1, 101)));
                     }
                     else
                     {
@@ -62,7 +66,31 @@ namespace examination2 // ANVÄNDAREN SKA KUNNA VÄLJA ATT SLUMPA 2D ELLER 3D ..
             }
             else
             {
-                Console.WriteLine("Not implemented yet");
+                List<Shape3D> shapes = new List<Shape3D>();
+                for (int i = 0; i < 20; i++)
+                {
+                    int figure3D = random.Next(1, 4);
+                    if (figure3D == 1)
+                    {
+                        shapes.Add(new Cuboid(random.NextDouble() * random.Next(1, 101), random.NextDouble() * random.Next(1, 101), random.NextDouble() * random.Next(1, 101)));
+                    }
+                    else if (figure3D == 2)
+                    {
+                        shapes.Add(new Sphere(random.NextDouble() * random.Next(1, 101)));
+                    }
+                    else
+                    {
+                        shapes.Add(new Cylinder(random.NextDouble() * random.Next(1, 101), random.NextDouble() * random.Next(1, 101), random.NextDouble() * random.Next(1, 101)));
+                    }
+                }
+
+                List<Shape3D> sortedShapes = shapes.OrderBy(o => o.ShapeType).ThenBy(o => o.Volume).ToList();
+
+                Console.WriteLine("Figur     Längd  Bredd  Höjd  MantelArea, BegränsningsArea, Volym");
+                foreach (Shape3D shape in sortedShapes)
+                {
+                    Console.WriteLine(shape.ToString("R"));
+                }
             }
 
 

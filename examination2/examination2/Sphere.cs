@@ -8,7 +8,7 @@ namespace examination2
     public class Sphere : Shape3D // KOLLA HUR JAG BER4ÄKNAR DE OLIKA VÄRDENA
     {
         public Sphere(double diameter)
-            : base(ShapeType.Ellipse, new Ellipse(diameter), 0.0)
+            : base(ShapeType.Sphere, new Ellipse(diameter), 0.0)
         {
             Diameter = diameter;
         }
