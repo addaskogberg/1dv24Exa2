@@ -5,7 +5,7 @@ using System.Text;
 
 namespace examination2
 {
-    public abstract class Shape3D : Shape
+    public abstract class Shape3D : Shape // SAMTLIGA SKA VARA READONLY KOLLA ALLA BERÄKNINGAR
     {
         protected Shape2D _baseShape;
         protected double _height;
@@ -17,7 +17,7 @@ namespace examination2
             _height = height;
         }
 
-        public double Height
+        public double Height 
         {
             get
             {
@@ -25,7 +25,14 @@ namespace examination2
             }
             set
             {
-                _height = value;
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("´höjden kan inte vara mindre än noll!");
+                }
+                else
+                {
+                    this._height = value;
+                }
             }
         }
 
@@ -41,64 +48,50 @@ namespace examination2
             }
         }
 
-        public double MantelArea
+        public virtual double MantelArea
         {
             get 
             {
-                if (base.ShapeType == ShapeType.Sphere)
-                {
-                    return _baseShape.Area * 4;
-                }
-                else 
-                {
-                    return _baseShape.Perimeter * 4;
-                }
-               
+                    return _baseShape.Perimeter * 4; 
             }
         }
 
-        public double TotalSurfaceArea
+        public virtual double TotalSurfaceArea
         {
             get
             {
-                if (base.ShapeType == ShapeType.Sphere)
+                    return _baseShape.Area * 2 + MantelArea;
+            }
+
+        }
+
+        public double Width // validera att höjden inte är mindre än noll
+        {
+            get => _baseShape.Width;
+
+            set
+            {
+                if (value < 0)
                 {
-                    return _baseShape.Area * 4;
+                    throw new ArgumentOutOfRangeException("längd kan inte vara mindre än noll!");
                 }
                 else
                 {
-                    return MantelArea + (2 * _baseShape.Area);
+                    this._baseShape.Width = value;
                 }
-
-            }
-
-        }
-
-        public double Width
-        {
-            get
-            {
-                return _baseShape.Width;
-            }
-            set
-            {
-                _baseShape.Width = value;
             }
         }
 
-        public double Volume
+        public virtual double Volume
         {
             get
             {
                 return _baseShape.Area * _height;
             }
-            set
-            {
-                Volume = value;
-            }
+ 
         }
 
-        public new string ToString()
+        public override string ToString()
         {
             string returnString = "";
             returnString += "Längd : " + Length.ToString() + "\n";

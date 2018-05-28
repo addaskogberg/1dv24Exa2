@@ -8,23 +8,41 @@ namespace examination2
     public abstract class Shape
     {
         private readonly bool _is3D;
+        private ShapeType shapeType;
  
-        protected Shape(ShapeType shapeType)
+        protected Shape(ShapeType shapeType) 
         {
             ShapeType = shapeType;
         }
 
-       // public bool Is3D => _is3D;
-
-        public ShapeType ShapeType
+        public ShapeType ShapeType 
         {
-            get;
-            private set;
+            get
+            {
+                return shapeType;
+            }
+            private set
+            {
+                this.shapeType = value;
+            }   
         }
 
-        public new string ToString()
+        // ska implementeras en egenskap som ska returnera ett lämpligt värde true eller false 
+        public bool Is3D
         {
-            return ShapeType.ToString();
+            get
+            {
+                if (ShapeType == ShapeType.Cuboid || ShapeType == ShapeType.Cylinder || ShapeType == ShapeType.Sphere)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
+
+        public abstract override string ToString();
     }
 }

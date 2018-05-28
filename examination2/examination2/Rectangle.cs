@@ -4,22 +4,24 @@ using System.Linq;
 using System.Text;
 
 namespace examination2
-{
-    public class Rectangle : Shape2D
+{// ´här ska  beräkningar för area och omkrets ligga
+    public class Rectangle : Shape2D 
     {
         public Rectangle(double length, double width)
             :base(ShapeType.Rectangle, length, width)
         {
         }
 
-        public new double Area
+        public override double Area
         {
-            get => base.Area;
+            get => base.Length * base.Width;
         }
 
-        public new double Perimeter
+        public override double Perimeter
         {
-            get => base.Perimeter;
+            get => 2 * base.Length + 2 * base.Width;
         }
     }
 }
+
+

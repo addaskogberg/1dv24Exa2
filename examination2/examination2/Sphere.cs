@@ -5,7 +5,7 @@ using System.Text;
 
 namespace examination2
 {
-    public class Sphere : Shape3D
+    public class Sphere : Shape3D // KOLLA HUR JAG BER4ÄKNAR DE OLIKA VÄRDENA
     {
         public Sphere(double diameter)
             : base(ShapeType.Ellipse, new Ellipse(diameter), 0.0)
@@ -17,35 +17,29 @@ namespace examination2
         {
             get
             {
-                if (Width == Length)
-                {
-                    return Width + Length;
-                }
-                else
-                {
-                   return -1.0;
-                }
+                return Width *2;            
             }
             set
             {
+                base.Width = value;
                 base.Length = value;
                 base.Height = value;
             }
         }
 
-        public new double MantelArea
+        public override double MantelArea
         {
-            get => base.MantelArea;
+            get => base._baseShape.Area*4;
         }
 
-        public double TotalSurfaceAre
+        public override double TotalSurfaceArea
         {
-            get => base.TotalSurfaceArea;
+            get => MantelArea;
         }
 
-        public new double Volume
+        public override double Volume // BERÄKNA SEPARAT
         {
-            get => base.Volume;
+            get => base._baseShape.Area * base.Width * 4 / 3;
         }
     }
 }

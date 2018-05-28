@@ -13,59 +13,56 @@ namespace examination2
         protected Shape2D(ShapeType shapeType, double length, double width)
             : base(shapeType)
         {
-            _length = length;
-            _width = width;
+            Length = length;
+            Width = width;
         }
 
-        public double Area
+        // ska vara abstract och inte någon implementation
+        public abstract double Area
         {
-            get
-            {
-                if (base.ShapeType == ShapeType.Rectangle)
-                {
-                    return  _length * _width;
-                }
-                else
-                {
-                    return Math.PI *_length * _width;
-                }
-
-            }
-
+            get;
         }
-
-        public double Length
+        
+        public double Length // validera att värde inte är mindre än noll ska kasta undantag
         {
             get => _length;
 
-            set => _length = value;
-        }
-
-        public double Perimeter
-        {
-            get
+            set
             {
-                if (base.ShapeType == ShapeType.Rectangle)
+                if(value < 0)
                 {
-                    return 2 * _length + 2 + _width ;
-                } 
+                    throw new ArgumentOutOfRangeException("längd kan inte vara mindre än noll!");
+                }
                 else
                 {
-                    return Math.Sqrt(Math.Pow(_length, 2)*2 + Math.Pow(_width, 2)*2)*Math.PI ;
+                    this._length = value;
                 }
-
             }
-           
         }
 
-        public double Width
+        public abstract double Perimeter
+        {
+            get;
+        }
+
+        public double Width // validera att värde inte är mindre än noll ska kasta undantag
         {
             get => _width;
 
-            set => _width = value;
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("bredd kan inte vara mindre än noll!");
+                }
+                else
+                {
+                    this._width = value;
+                }
+            }
         }
 
-        public new string ToString()
+        public override string ToString()
         {
             string returnString = "";
             returnString += "Längd : " + Length.ToString() + "\n";
@@ -80,7 +77,7 @@ namespace examination2
         {
             if (format == "R")
             {
-                return ShapeType.ToString() + " " + Length.ToString() + " " + Width.ToString() + " " + Perimeter.ToString() + " " + Area.ToString();
+                return ShapeType.ToString() + " " + Math.Round(Length, 2).ToString() + " " + Math.Round(Width, 2).ToString() + " " + Math.Round(Perimeter, 2).ToString() + " " + Math.Round(Area, 2).ToString();
             }
             else if (format == "G" || format == "" || format == null)
             {
