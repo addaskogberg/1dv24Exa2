@@ -5,7 +5,7 @@ using System.Text;
 
 namespace examination2
 {
-    public class Sphere : Shape3D // KOLLA HUR JAG BER4ÄKNAR DE OLIKA VÄRDENA
+    public class Sphere : Shape3D 
     {
         public Sphere(double diameter)
             : base(ShapeType.Sphere, new Ellipse(diameter), 0.0)
@@ -37,7 +37,7 @@ namespace examination2
             get => MantelArea;
         }
 
-        public override double Volume // BERÄKNA SEPARAT
+        public override double Volume 
         {
             get => base._baseShape.Area * base.Width * 4 / 3;
         }

@@ -17,13 +17,13 @@ namespace examination2
             Width = width;
         }
 
-        // ska vara abstract och inte någon implementation
+        
         public abstract double Area
         {
             get;
         }
         
-        public double Length // validera att värde inte är mindre än noll ska kasta undantag
+        public double Length 
         {
             get => _length;
 
@@ -45,7 +45,7 @@ namespace examination2
             get;
         }
 
-        public double Width // validera att värde inte är mindre än noll ska kasta undantag
+        public double Width 
         {
             get => _width;
 

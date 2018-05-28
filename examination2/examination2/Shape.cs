@@ -27,7 +27,7 @@ namespace examination2
             }   
         }
 
-        // ska implementeras en egenskap som ska returnera ett lämpligt värde true eller false 
+        
         public bool Is3D
         {
             get

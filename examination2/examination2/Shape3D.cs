@@ -5,7 +5,7 @@ using System.Text;
 
 namespace examination2
 {
-    public abstract class Shape3D : Shape // SAMTLIGA SKA VARA READONLY KOLLA ALLA BERÄKNINGAR
+    public abstract class Shape3D : Shape 
     {
         protected Shape2D _baseShape;
         protected double _height;
@@ -65,7 +65,7 @@ namespace examination2
 
         }
 
-        public double Width // validera att höjden inte är mindre än noll
+        public double Width 
         {
             get => _baseShape.Width;
 

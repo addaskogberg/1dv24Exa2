@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace examination2
-{// ´här ska  beräkningar för area och omkrets ligga
+{
     public class Rectangle : Shape2D 
     {
         public Rectangle(double length, double width)
